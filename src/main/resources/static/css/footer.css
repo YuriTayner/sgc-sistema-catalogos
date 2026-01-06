@@ -1,0 +1,11 @@
+footer {
+  position: fixed; 
+  bottom: 0;
+  width: 96%;
+  height: 10%;
+  background: linear-gradient(135deg, #1A1A2E, #16213E);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 2px solid #cccccc26;
+}
