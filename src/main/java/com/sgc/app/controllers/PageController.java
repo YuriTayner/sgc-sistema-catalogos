@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.sgc.app.models.Usuario;
+
 //Controller da pagina inicial
 @Controller
 public class PageController {
@@ -15,7 +17,15 @@ public class PageController {
 
     @GetMapping("/registerUser")
     public String register(Model model) {
+        model.addAttribute("usuario", new Usuario());
         model.addAttribute("content", "pages/registerUser :: content");
+        return "layout/index";
+    }
+
+    @GetMapping("/login")
+    public String login(Model model) {
+        model.addAttribute("usuario", new Usuario());
+        model.addAttribute("content", "pages/login :: content");
         return "layout/index";
     }
 }
