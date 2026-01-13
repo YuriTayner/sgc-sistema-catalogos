@@ -15,6 +15,12 @@ public class PageController {
         return "layout/index";
     }
 
+    @GetMapping("/indexLogged")
+    public String indexLogged(Model model) {
+        model.addAttribute("content", "pages/dashboard :: content");
+        return "layout/indexLogged";
+    }
+
     @GetMapping("/registerUser")
     public String register(Model model) {
         model.addAttribute("usuario", new Usuario());
